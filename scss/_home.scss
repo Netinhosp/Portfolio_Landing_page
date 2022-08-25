@@ -1,0 +1,126 @@
+body {
+    background-color: $bg;
+}
+
+.s-hero {
+    margin-top: 5rem;
+    .container {
+        @include flex(row, center, center);
+        .area-text {
+            width: 100%;
+            max-width: 54rem;
+            h1 {
+                font-weight: 500;
+                font-size: 6.7rem;
+                line-height: 8rem;
+                letter-spacing: -0.4rem;
+                color: $secondary;
+                margin-bottom: 2.1rem;
+            }
+            p {
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: -0.1rem;
+                color: $accent;
+                margin-bottom: 4rem;
+            }
+            form {
+                input {
+                    background-color: transparent;
+                    border: 1px solid #FCFCFF;
+                    border-radius: 7px;
+                    padding: 1.55rem 2.3rem;
+                    background-image: url(../image/Icon-Message.svg);
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: 0.5rem;
+                    background-size: 1.6rem;
+                    color: $accent;
+                    margin-right: 1.6rem;
+                }
+                button {
+                    padding: 1.75rem 2rem;
+                }
+            }
+        }
+        .area-image {
+            margin-right: -14rem;
+            /*position: absolute;
+            top: 10rem;
+            right: 8rem;*/
+        }
+        @include responsive(1200px) {
+            .area-image {
+                margin-right: -9rem
+            }
+        }
+        @include responsive(991px) {
+            .area-text {
+                h1 {
+                    font-size: 5.7rem;
+                    line-height: 6rem;
+                }
+            }
+        }  
+        @include responsive(768px) {
+            .area-text {
+                h1 {
+                    font-size: 4rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+                form {
+                    input {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+            .area-image {
+                margin-right: -7rem;
+            }
+        }     
+        @include responsive(600px) {
+            flex-direction: column;
+            .area-text {
+                h1 {
+                    max-width: 100%;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+                form {
+                    text-align: center;
+                }
+            }
+            .area-image {
+                margin-right: 0;
+            }
+        }     
+    }
+}
+
+footer {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    .container {
+        #p1 {
+            color: $secondary;
+            font-weight: 500;
+            text-align: center;
+        }
+        #p2 {
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: $accent;
+            text-align: center;
+        }
+        @include responsive(600px) {
+            #p1 {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

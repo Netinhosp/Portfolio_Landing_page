@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    @include responsive(1200px) {
+        font-size: 60%;
+    }
+    @include responsive(991px) {
+        font-size: 55%;
+    }
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}

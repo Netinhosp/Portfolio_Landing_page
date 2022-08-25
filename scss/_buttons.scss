@@ -1,0 +1,14 @@
+.btn {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.03rem;
+    border-radius: 0.7rem;
+    color: $secondary;
+    background-color: $primary;
+    transition: all, .3s;
+    &:hover {
+        color: $primary;
+        background-color: $secondary;
+    }
+}

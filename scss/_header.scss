@@ -1,0 +1,54 @@
+header {
+    .container {
+        margin-top: 5.1rem;
+        @include flex(row, flex-end, space-between);
+        a {
+            img {
+                max-width: 16.9rem;
+            }
+        }
+        #menu-img {
+            display: none;
+            max-width: 4rem;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            ul {
+                display: flex;
+                margin-right: 12.8rem;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 5.3rem;
+                    }
+                    a {
+                        float: left;
+                        font-weight: 500;
+                        font-size: 2rem;
+                        line-height: 2rem;
+                        letter-spacing: -0.03rem;
+                        color: $secondary;
+                        transition: color, .3s;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+            button {
+                padding: 1.35rem 3.8rem;
+            }
+            
+        }
+    }
+    @include responsive(768px) {
+        .container {
+            #menu-img {
+                display: block;
+            }
+            nav {
+                display: none;
+            }
+        }
+    }
+}
